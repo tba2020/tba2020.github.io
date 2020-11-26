@@ -1,2 +1,2 @@
 # tba2020.github.io
-tba website
+This is the website of TBACITY
