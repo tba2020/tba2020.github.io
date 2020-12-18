@@ -30,10 +30,16 @@
     <div class="inner-box">
         <h1>TBA CITY</h1>
         <div id="button-box" class="button-box" data-shadow-color="0,0,0">
-            <script>document.write('<a href="//www.smart-talk.io/download/apk/TBA.apk?v='+(new Date().getTime())+'" target="_hidden_"><img src="download.png" class="btn btn-download"></a>');</script>
+            <script>document.write('<a href="//www.smart-talk.io/download/apk/TBA.apk?v='+(new Date().getTime())+'" target="_hidden_" name="link-download"><img src="download.png" class="btn btn-download"></a>');</script>
         </div>
         <div class="minigame mg15">
-            <div id='box_score'>Score : <span id='score'>0</span></div>
+            <div>
+                <div id='box_hint'>Hint : <span id='hint' class="btn btn-hint">0</span></div>
+                <div id='box_score'>
+                    Max : <span id='max_score'>0</span><br>
+                    Score : <span id='score'>0</span>
+                </div>
+            </div>
             <div id='countDown'>Press the start button!</div>
             <div id='info'><button id='startBtn'>Start!</button></div>
             <table id='cardTable'>

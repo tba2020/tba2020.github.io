@@ -3,8 +3,9 @@
 .width500px{width: 450px; display: inline-block;}
 .center{text-align: center;}
 .minigame.mg15 {max-width: 450px; width:90%; margin: auto;position:relative}
-#box_score {padding:5px;text-align:right}
-#countDown{background-color: #0f345e; color: white; padding:5px}
+#box_hint {width: 40%;padding:5px;text-align:left;float:left}
+#box_score {width: 40%;padding:5px;text-align:right;float:right}
+#countDown{background-color: #0f345e; color: white; padding:5px;clear:both}
 #cardTable{border-collapse: collapse;width:100%}
 #cardTable td{border: 1px solid #0f345e; /*width: 75px; height: 121px;*/ text-align: center; cursor: pointer;}
 #cardTable td img{max-width: 100%;}

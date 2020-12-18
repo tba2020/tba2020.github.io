@@ -9,37 +9,38 @@
     // 난수 생성 함수
     function generateRandom (min, max) {
         var ranNum = Math.floor(Math.random()*(max-min+1)) + min;
-            return ranNum;
+		return ranNum;
     }
 
-    var cards; // 카드 목록
+    const cards = [
+		'1.png','1.png', // 마이크
+		'2.png','2.png', // 미코
+		'3.png','3.png', // 미지
+		'4.png','4.png', // 진독
+		// '5.png','5.png', //
+		'6.png','6.png', // 나양
+		'7.png','7.png', // 토빗
+		'8.png','8.png', // 피깃
+		'9.png','9.png', // 민키
+		// '12.png','12.png', // 배배
+		'11.png','11.png', // 박씨
+		'10.png','10.png' // 오덕
+	]; // 카드 목록
     var score = 0; // 점수
+    var hint = 0; // 힌트
     var openedCtn = 0; // 맞춘 카드 갯수
 
     // 카드 배치
     function setTable(){
-        cards = [
-        '1.png','1.png', // 마이크
-        '2.png','2.png', // 미코
-        '3.png','3.png', // 미지
-        '4.png','4.png', // 진독
-        // '5.png','5.png', //
-        '6.png','6.png', // 나양
-        '7.png','7.png', // 토빗
-        '8.png','8.png', // 피깃
-        '9.png','9.png', // 민키
-        // '12.png','12.png', // 배배
-        '11.png','11.png', // 박씨
-        '10.png','10.png' // 오덕
-        ];
         var cardTableCode = '<tr>';
-        var cnt_card = cards.length;
+		let _card = JSON.parse(JSON.stringify(cards));
+		var cnt_card = _card.length;
         for(var i=0;i<cnt_card;i++) {
             if(i>0 && i%(cnt_card/4) == 0){
                 cardTableCode += '</tr><tr>';
             }
             var idx = generateRandom(0,cnt_card-1-i);
-            var img = cards.splice(idx,1);
+            var img = _card.splice(idx,1);
 
             cardTableCode += '<td id="card'+i+'"><img class="front" src="/images/mg15/'+img+'"><img class="back" src="/images/mg15/0.png" style="display:none"></td>';
         }
@@ -57,6 +58,8 @@
     function startGame() {
         var sec = 4;
 
+		hint = 1;
+		displayHint();
         $('#info').hide(); // 안내 문구 가리기
         scoreInit(); // 점수 초기화
         setTable(); // 카드 배치
@@ -78,9 +81,9 @@
 
     function endGame() {
         $('#info').show();
-        $('#cardTable').empty();
+		$('#cardTable').empty();
+		saveScore();
     }
-
 
     // 카드 선택 시
     $(document).on('click', '#cardTable td', function(){
@@ -131,7 +134,29 @@
         $('#'+openCardId2).removeClass('opened');
         openCardId = '';
         openCardId2 = '';
-    }
+	}
+
+	// 두개의 카드 보여주고 닫기
+	function showHint() {
+		if(hint<1) return ;
+        if(gameState != '') return; // 게임 카운트 다운중일 때 누른 경우 return
+        if(openCardId2 != '') return; // 2개 열려있는데 또 누른 경우 return
+		gameState = 'hint';
+		let n = ['0','1'];
+		for(i in n) {
+			let t=0, cnt_card = $('img.back:visible').length;
+			t = Math.floor(Math.random()*cnt_card);
+			n[i] = $('img.back:visible').eq(t).parent().attr('id');
+			$('#'+n[i]).find('img.front').show();
+			$('#'+n[i]).find('img.back').hide();
+		}
+		setTimeout(function(){
+			$('#'+n[0]+', #'+n[1]).find('img.front').hide();
+			$('#'+n[0]+', #'+n[1]).find('img.back').show();
+			gameState = '';
+		}, 2000);
+		displayHint(--hint);
+	}
 
     // 점수 초기화
     function scoreInit(){
@@ -148,12 +173,35 @@
     function scoreMinus(){
         score -= 5;
         $('#score').text(score);
-    }
+	}
+	// 힌트 수 보여주기
+	function displayHint() {
+		$('#hint').text(hint);
+	}
+	// 최고점수 보여주기
+	function displayMaxScore() {
+		$('#max_score').text(localStorage.getItem("mg15_score"));
+	}
+	displayMaxScore();
+	// 최고 점수 저장
+	function saveScore() {
+		let max_score = localStorage.getItem("mg15_score");
+		if(score>max_score) {
+			localStorage.setItem("mg15_score", score);
+		}
+		displayMaxScore()
+	}
 
     $(document).on('click', '#startBtn', function(){
-        if(gameState == '') {
-            startGame();
+		if(gameState == '') {
+			startGame();
             gameState = 'alreadyStart'
         }
-    });
+	}).on('click', '.btn-download', function(){// 다운로드 클릭시 힌트수 증가
+		displayHint(++hint);
+	}).on('click', '.btn-hint', function(){// 다운로드 클릭시 힌트수 증가
+		showHint();
+	})
+	;
+
 
