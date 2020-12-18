@@ -4,10 +4,10 @@
 .center{text-align: center;}
 .minigame.mg15 {max-width: 450px; width:90%; margin: auto;position:relative}
 #box_score {padding:5px;text-align:right}
-#countDown{background-color: #5AAFFF; color: white; padding:5px}
+#countDown{background-color: #0f345e; color: white; padding:5px}
 #cardTable{border-collapse: collapse;width:100%}
-#cardTable td{border: 1px solid #5AAFFF; /*width: 75px; height: 121px;*/ text-align: center; cursor: pointer;}
+#cardTable td{border: 1px solid #0f345e; /*width: 75px; height: 121px;*/ text-align: center; cursor: pointer;}
 #cardTable td img{max-width: 100%;}
-#cardTable td span{font-size: 25pt; font-weight: bold; color: #5AAFFF; display: none;}
+#cardTable td span{font-size: 25pt; font-weight: bold; color: #0f345e; display: none;}
 #info{width: 100%; /*height: 180px;*/ background-color: #DDDDDD; color: white; padding: 40% 0;}
-#startBtn{border: none; color: white; background-color: #5AAFFF; width: 80px;padding: 5px; font-weight: bold; cursor: pointer;font-size: 20pt;}
+#startBtn{border: none; color: white; background-color: #0f345e; width: 120px;padding: 5px; font-weight: bold; cursor: pointer;font-size: 20pt;}
