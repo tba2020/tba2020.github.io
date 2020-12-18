@@ -4,6 +4,7 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
     <link rel="stylesheet" href="tba.css"/>
+    <link rel="stylesheet" href="mg15.css"/>
     <title>TBA CITY - Download</title>
 
     <!-- meta info -->
@@ -20,14 +21,22 @@
     <meta name="twitter:title" content="TBA CITY - Download" />
     <!-- // meta info -->
 
+    <style type="text/css">
+    </style>
 </head>
 <body>
 
-<div class="container" style="">
+<div class="container">
     <div class="inner-box">
         <h1>TBA CITY</h1>
         <div id="button-box" class="button-box" data-shadow-color="0,0,0">
             <script>document.write('<a href="//www.smart-talk.io/download/apk/TBA.apk?v='+(new Date().getTime())+'" target="_hidden_"><img src="download.png" class="btn btn-download"></a>');</script>
+        </div>
+        <div class="minigame mg15">
+            <div id='box_score'>Score : <span id='score'>0</span></div>
+            <div id='countDown'>Press the start button!</div>
+            <div id='info'><button id='startBtn'>Start!</button></div>
+            <table id='cardTable'></table>
         </div>
         <p>© Copyright <a href="#">SCC Co., Ltd.</a></p>
     </div>
@@ -37,5 +46,7 @@
 <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="realshadow.js" type="text/javascript"></script>
 <script src="tba.js" type="text/javascript"></script>
+<script src="mg15.js" type="text/javascript"></script>
+
 </body>
 </html>
