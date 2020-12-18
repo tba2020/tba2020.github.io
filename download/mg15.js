@@ -55,7 +55,7 @@
 
     // 게임 시작
     function startGame() {
-        var sec = 6;
+        var sec = 4;
 
         $('#info').hide(); // 안내 문구 가리기
         scoreInit(); // 점수 초기화
@@ -73,7 +73,7 @@
             $('#countDown').text('Match the TBA Card!!');
             hiddenCards();
             gameState = '';
-        }, 6000);
+        }, sec * 1000);
     }
 
     function endGame() {
