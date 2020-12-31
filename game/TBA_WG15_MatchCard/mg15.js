@@ -42,7 +42,7 @@
             var idx = generateRandom(0,cnt_card-1-i);
             var img = _card.splice(idx,1);
 
-            cardTableCode += '<td id="card'+i+'"><img class="front" src="/images/mg15/'+img+'"><img class="back" src="/images/mg15/0.png" style="display:none"></td>';
+            cardTableCode += '<td id="card'+i+'"><img class="front" src="images/'+img+'"><img class="back" src="images/0.png" style="display:none"></td>';
         }
         cardTableCode += '</tr>';
         $('#cardTable').html(cardTableCode);
