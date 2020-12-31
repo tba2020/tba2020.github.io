@@ -20,13 +20,24 @@
     <meta name="twitter:description" content="TBA CITY 다운로드페이지입니다." />
     <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
     <!-- // meta info -->
+    <script src="jquery-3.3.1.min.js?v=2020121823" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
         <div class="inner-box">
             <h1>TBA CITY</h1>
             <div id="button-box" class="button-box" data-shadow-color="0,0,0">
-                <script>document.write('<a href="//www.smart-talk.io/download/apk/TBA.apk?v='+(new Date().getTime())+'" target="_hidden_" name="link-download"><img src="download.png" class="btn btn-download"></a>');</script>
+                <a href="//www.smart-talk.io/download/apk/TBA.apk?v=" target="_hidden_" name="link-download" id="link-download"><img src="download.png" class="btn btn-download"></a>
+                <script>
+                    var reset_btn_time = function(){
+                        $('[name=link-download]').each(function(){
+                            let url = $(this).attr('href');
+                            $(this).attr('href', url.substr(0, url.indexOf('?v=')) + '?v='+(new Date().getTime()) );
+                        })
+                        setTimeout(reset_btn_time, 10000);
+                    };
+                    reset_btn_time();
+                </script>
             </div>
             <div class="addthis_inline_share_toolbox"></div>
 
@@ -63,7 +74,6 @@
         </div>
     </div>
     <iframe id="_hidden_" name="_hidden_" style="width:0;height:0" frameborder=”0″ marginwidth=”0″ marginheight=”0″ scrolling=””></iframe>
-    <script src="jquery-3.3.1.min.js?v=2020121823" type="text/javascript"></script>
     <script src="realshadow.js?v=2020121823" type="text/javascript"></script>
     <script src="tba.js?v=2020121823" type="text/javascript"></script>
     <script src="mg15.js?v=2020121823" type="text/javascript"></script>
