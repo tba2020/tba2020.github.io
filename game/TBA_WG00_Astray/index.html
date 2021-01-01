@@ -10,7 +10,7 @@
         <script src="maze.js"></script>
 
         <script>
-
+            __(''); // 의미없는 코드 넣어서 첫번째 번역 안되는 현상 패스.
             var camera         = undefined,
                 scene          = undefined,
                 renderer       = undefined,
@@ -249,6 +249,11 @@
 
 
             function onMoveKey(axis) {
+                console.log('axis:',axis,', keyAxis:',keyAxis);
+                // left key down : [-1, 0], key up : [0, 0]
+                // right key down : [1, 0], key up : [0, 0]
+                // up key down : [0, 1], key up : [0, 0]
+                // down key down : [0, -1], key up : [0, 0]
                 keyAxis = axis.slice(0);
             }
 
@@ -302,6 +307,54 @@
 
                 // Start the game loop.
                 requestAnimationFrame(gameLoop);
+
+                // //가속도계가 기기의 방향의 변화를 감지 했을때
+                if(window.DeviceOrientationEvent){
+                    //이벤트 리스너 등록
+                    window.addEventListener('deviceorientation', function(event) {
+                        var absolute = event.absolute;
+                        var alpha = event.alpha;
+                        var beta = event.beta; //(-180, 180)
+                        var gamma = event.gamma; //(-90, 90)
+                        var html =  "absolute: " +absolute+ "<br>alpha: " +alpha+ "<br>bata: " +beta+ "<br>gamma: "+ gamma;
+                        console.log(html);
+                        $('#dataContainerOrientation').html(html);
+
+                        //볼을 움직이자.
+                        // if(beta > 90) {beta = 90};
+                        // if(beta < -90) {beta = -90};
+                        // beta +90;
+                        // gamma +90;
+
+                        // ball.style.top = (maxX*beta/180 + 100) + "px";
+                        // ball.style.left = (maxY*gamma/180 + 100) + "px";
+
+                    }, false);
+                }
+                // //가속도에 변화가 발생 할때
+                if(window.DeviceMotionEvent){
+                    window.addEventListener('devicemotion', function(event){
+                        var x = event.accelerationIncludingGravity.x; // x>0 : 왼쪽으로 이동, x<0 : 오른쪽으로 이동
+                        var y = event.accelerationIncludingGravity.y; // y>0 : 아래로 , y<0 : 위로
+                        var z = event.accelerationIncludingGravity.z;
+                        //var r = event.accelerationIncludingGravity.r;
+                        var html = "x: " +x+ "<br>y: "+y+ "<br>z: " +z;
+                        console.log(html);
+                        $('#dataContainerMotion').html(html);
+                        // 민감도 조절
+                        const s = 0.5; // 0 < 민감도 <= 1
+                        // 모바일에서 세로모드일때 x,y 반전 적용하기
+                        let mobile = navigator.userAgent.indexOf('Mobi') > -1;
+                        const portrait = window.matchMedia('(orientation: portrait)').matches; // 가로모드면 참, 세로모드면 거짓
+                        if(mobile && !portrait) {
+                            t = x;
+                            x = y*-1; // y는 방향이 좌우 바뀝니다. 쩝.
+                            y = t;
+                        }
+                        // 이동
+                        onMoveKey([x*-1*s,y*-1*s]);
+                    }, true);
+                }
 
             })
 
@@ -361,6 +414,8 @@
 
     <div id='help'>
         <script>_e('Hold down the \'I\' key for instructions.');</script>
+        <!-- <p id="dataContainerOrientation"></p> -->
+        <!-- <p id="dataContainerMotion"></p> -->
     </div>
 
     <div id='level'>
