@@ -28,7 +28,7 @@ body {
     left: 0px;
     top: 0px;
 	padding: 4px;
-    color: yellow;
+	color: yellow;
 }
 #level {
     color: yellow;
@@ -47,4 +47,31 @@ body {
 #joyDiv #joystick{
 	width:200px;height:200px;margin-bottom:20px;margin:50px;
 	position: absolute;bottom:0;left:0;
+}
+
+#score {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 32px;
+    margin: 0px;
+    border: 2px solid white;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    /* font-size: 1rem; */
+}
+#score_table {
+    overflow: auto;
+	margin: 1rem 0 0;
+    height: calc(100% - 6rem);
+}
+#score_table table {
+	margin: 0 auto;
+	font-size: 1rem;
+    color: #fff;
+}
+#score_table table th {
+	padding-right: 1rem;
 }

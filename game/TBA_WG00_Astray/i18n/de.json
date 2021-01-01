@@ -6,6 +6,8 @@
 		"It can also be moved with a joystick or Gyro sensor.":"Es kann auch mit einem Joystick oder einem Gyro-Sensor bewegt werden.",
 		"Vim trainees: h, j, k, l":"Vim-Auszubildende: h, j, k, l",
 		"Hold down the 'I' key for instructions.":"Halten Sie die 'I'-Taste gedrückt, um Anweisungen zu erhalten.",
+		"Hold down the 'H' key to view the previous record.":"Halten Sie die Taste 'H' gedrückt, um den vorherigen Datensatz anzuzeigen.",
+		"Your score is":"Dein Ergebnis ist",
 		"Level":"Niveau"
 	}
 }

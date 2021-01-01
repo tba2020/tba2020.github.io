@@ -57,6 +57,18 @@ function timer() {
 	$('#timer').text(m+':'+s+'.'+d);
 }
 
+function genScoreTable() {
+	if(score && score.length>0) {
+		_score = score.reverse();
+		let table = '<table>';
+		for(i in _score) {
+			table+= '<tr><th>'+__('Level')+' '+(_score.length-i)+'</th><td>'+_score[i]+'</td></tr>';
+		}
+		table+='</table>';
+		$('#score_table').html(table);
+	}
+}
+
 function createPhysicsWorld() {
     // Create the world object.
     wWorld = new b2World(new b2Vec2(0, 0), true);
@@ -219,6 +231,7 @@ function gameLoop() {
                 light.intensity = 1.0;
 				gameState = 'play'
 				timeStart = new Date().getTime();
+				genScoreTable();
             }
             break;
 
@@ -280,7 +293,7 @@ function onMoveKey(axis) {
 
 jQuery.fn.centerv = function() {
     wh = window.innerHeight;
-    h = this.outerHeight();
+	h = this.outerHeight();
     this.css("position", "absolute");
     this.css("top", Math.max(0, (wh - h) / 2) + "px");
     return this;
@@ -290,6 +303,7 @@ jQuery.fn.centerv = function() {
 jQuery.fn.centerh = function() {
     ww = window.innerWidth;
     w = this.outerWidth();
+	console.log(ww, w, this);
     this.css("position", "absolute");
     this.css("left", Math.max(0, (ww - w) / 2) + "px");
     return this;
@@ -316,9 +330,12 @@ $(document).ready(function() {
 
     // Prepare the instructions.
     $('#instructions').center();
-    $('#instructions').hide();
+    $('#score').center();
+    $('#instructions,#score').hide();
     KeyboardJS.bind.key('i', function() { $('#instructions').show() },
         function() { $('#instructions').hide() });
+    KeyboardJS.bind.key('h', function() { $('#score').show() },
+        function() { $('#score').hide() });
 
     // Create the renderer.
     renderer = new THREE.WebGLRenderer();
@@ -335,7 +352,18 @@ $(document).ready(function() {
     gameState = 'initialize';
 
     // Start the game loop.
-    requestAnimationFrame(gameLoop);
+	requestAnimationFrame(gameLoop);
+
+	// history
+	if(score && score.length>0) {
+		score = score.reverse();
+		let table = '<table>';
+		for(i in score) {
+			table+= '<tr><th>'+__('Level')+' '+(score.length-i)+'</th><td>'+score[i]+'</td></tr>';
+		}
+		table+='</table>';
+		$('#score_table').html(table);
+	}
 
     // //가속도계가 기기의 방향의 변화를 감지 했을때
     // if (window.DeviceOrientationEvent) {
