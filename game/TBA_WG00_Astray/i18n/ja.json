@@ -1,8 +1,9 @@
 {
 	"gentime":1600243127,
 	"data":{
-		"How to play Astray:":"Astrayのプレイ方法：",
+		"How to play TBA Astray:":"TBA Astrayのプレイ方法：",
 		"Use the arrow keys to move the ball and find the exit to the maze.":"矢印キーを使用して、ボールを移動し、迷路の出口を見つける。",
+		"It can also be moved with a joystick or Gyro sensor.":"ジョイスティックやジャイロセンサーで動かすこともできます。",
 		"Vim trainees: h, j, k, l":"Vimユーザー：h、j、k、l",
 		"Hold down the 'I' key for instructions.":"ゲーム方法を表示するには「I」キーを押してください。",
 		"Level":"レベル"

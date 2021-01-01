@@ -27,7 +27,7 @@ function getCookie( name ){
         }
         return false;
     }
-    const support_lang = ['en', 'es', 'de', 'fr', 'ko', 'zh', 'jp'],
+    const support_lang = ['en', 'es', 'de', 'fr', 'ko', 'zh', 'ja'],
 		default_lang = 'en';
 	var loaded_data = false,
 		lang_data = {},
