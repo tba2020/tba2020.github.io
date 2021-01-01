@@ -391,7 +391,7 @@ $(document).ready(function() {
 		const y = joy.GetY();
 		const w = joy.GetWidth()/2;
 		const h = joy.GetHeight()/2;
-		const s = 2; // 민감도 : 조이스틱 영역의 크기가 바뀔 수 있어 영역크기로 나눠서 사용함. (최대값:1) 그래서 속도가 느리니 민감도를 1이상으로 잡아 속도를 높여줍니다.
+		const s = 3; // 민감도 : 조이스틱 영역의 크기가 바뀔 수 있어 영역크기로 나눠서 사용함. (최대값:1) 그래서 속도가 느리니 민감도를 1이상으로 잡아 속도를 높여줍니다.
 		onMoveKey([x*s/w, y*s/h]);
 		// 조이스틱 사용시 gyro 중지
 		if(joy.GetDir()=='C') {
