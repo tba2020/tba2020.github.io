@@ -17,6 +17,9 @@ var camera = undefined,
     brickTexture = THREE.ImageUtils.loadTexture('brick.png'), //brick.png
 	gameState = undefined,
 	useGyro = false, // 자이로스코프 센서 사용여부.
+	timeStart = 0;
+	timeEnd = 0;
+	score = [],
 
     // Box2D shortcuts
     b2World = Box2D.Dynamics.b2World,
@@ -32,6 +35,27 @@ var camera = undefined,
     wWorld = undefined,
     wBall = undefined;
 
+// 마지막 실행한 scroe 로드 마지막 level과 미로크기 설정
+_score = JSON.parse(localStorage.getItem('tba_wg00_score'));
+if(_score && _score.length>0) {
+	score = _score;
+	level = _score.length + 1;
+	mazeDimension = (level + 4) * 2 + 1; // 1 : 11, 2 : 13, 3 : 15
+}
+
+
+function timer() {
+	timeEnd = new Date().getTime();
+	t = timeEnd - timeStart ;
+	s = Math.floor(t/1000);
+	m = Math.floor(s/60) + '';
+	m = m.length>1 ? m : '0'+m;
+	s = s%60 + '';
+	s = s.length>1 ? s : '0'+s;
+	d = t%1000 + '';
+	d = d.length>2 ? d : (d.length>1 ? '0'+d : '00'+d);
+	$('#timer').text(m+':'+s+'.'+d);
+}
 
 function createPhysicsWorld() {
     // Create the world object.
@@ -184,7 +208,7 @@ function gameLoop() {
             light.position.set(1, 1, 1.3);
             light.intensity = 0;
             var level = Math.floor((mazeDimension - 1) / 2 - 4);
-            $('#level').html(__('Level') + ' ' + level);
+            $('#level').text(level);
             gameState = 'fade in';
             break;
 
@@ -193,21 +217,28 @@ function gameLoop() {
             renderer.render(scene, camera);
             if (Math.abs(light.intensity - 1.0) < 0.05) {
                 light.intensity = 1.0;
-                gameState = 'play'
+				gameState = 'play'
+				timeStart = new Date().getTime();
             }
             break;
 
         case 'play':
             updatePhysicsWorld();
             updateRenderWorld();
-            renderer.render(scene, camera);
+			renderer.render(scene, camera);
+			timer();
 
             // Check for victory.
             var mazeX = Math.floor(ballMesh.position.x + 0.5);
             var mazeY = Math.floor(ballMesh.position.y + 0.5);
             if (mazeX == mazeDimension && mazeY == mazeDimension - 2) {
+				// 스코어 저장
+				var level = Math.floor((mazeDimension - 1) / 2 - 4);
+				score[(level-1)] = $('#timer').text();
+				localStorage.setItem('tba_wg00_score', JSON.stringify(score));
+				// 다음판으로 이동
                 mazeDimension += 2;
-                gameState = 'fade out';
+				gameState = 'fade out';
             }
             break;
 

@@ -23,13 +23,21 @@ body {
     color: white;
 }
 
-#level {
+#info {
     position: absolute;
     left: 0px;
     top: 0px;
-    padding: 4px;
+	padding: 4px;
+    color: yellow;
+}
+#level {
     color: yellow;
     font-weight: bold;
+}
+#timer {
+    color: yellow;
+	font-weight: bold;
+	font-size: 2rem;
 }
 
 #joyDiv {
