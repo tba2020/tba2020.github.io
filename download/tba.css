@@ -1,61 +1,19 @@
-html,
-body {
-    font-family:'Noto Sans KR',sans-serif, 'Malgun Gothic', '맑은 고딕', 'dotum';
-}
+html,body {font-family:'Noto Sans KR',sans-serif, 'Malgun Gothic', '맑은 고딕', 'dotum';}
+body {font: 15px "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;padding: 0;margin: 0;background: #FFF;color: #000}
 
-body {
-    font: 15px "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-    background: #FFF;
-    color: #000
-}
-
-h1,
-h2 {
-    margin-bottom: 0;
-}
-
-h1 {
-    color: #999;
-}
-
-h2 {
-    font-weight: 100;
-    font-size: 2em;
-}
-
-a {
-    color: #66f;
-    text-decoration: none
-}
-
-.container {
-    text-align: center;
-    padding: 0;
-    /* margin-top: calc(50vh - 170px); */
-    /* height:300px; */
-}
+h1,h2 {margin-bottom: 0;}
+h1 {color: #999;}
+h2 {font-weight: 100;font-size: 2em;}
+a {color: #66f;text-decoration: none}
+.container {text-align: center;padding: 0;/* margin-top: calc(50vh - 170px); *//* height:300px; */}
 .container .inner-box {/* border-top: 1px solid #000; */}
 .container .inner-box h1{margin-bottom: 20px;}
-
-.button-box {
-    margin: auto;
-    /* max-width:80%; */
-    background:url(./top_dog.jpg) no-repeat top center/300px transparent;
-    padding-top: 93px;
-}
-
-.download-box {
-    max-width: 800px;
-    margin: 0 auto 1rem;
-    border-radius: 20px;
-    padding: 4rem .5rem 1rem;
-    background-color: #2d2e2f;
-    width: 90%;
+.button-box {margin: auto;/* max-width:80%; */background:url(./top_dog.jpg) no-repeat top center/300px transparent;padding-top: 93px;}
+.download-box {max-width: 800px;margin: 0 auto 1rem;border-radius: 20px;padding: 4rem .5rem 1rem;background-color: #2d2e2f;width: 90%;}
+@media(max-width:640px) {
+    .download-box {padding: 2rem .5rem 1rem;}
 }
 .download-box>a>span {display:inline-block}
-
 .btn {cursor:pointer;max-width: 100%}
 .btn-download{width: 190px;padding: 1rem;border: 1px solid #EEE;color: #fff;border-radius: .7rem;background-color:#111;line-height:15px;margin:.5rem}
 .btn-windows{background: url(./icon/windows.png?t=1) no-repeat 1rem 50%/22px #111;}

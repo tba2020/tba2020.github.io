@@ -30,7 +30,7 @@
                 <div class="download-box">
                     <a href="//www.smart-talk.io/download/files/TBA.apk?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-android"></i><span class="btn-text">Android 다운로드<br><small>Version: 20201231_113</small></span></span></a>
                     <a href="//www.smart-talk.io/download/files/TBA.zip?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-windows"></i><span class="btn-text">Windows 다운로드<br><small>Version: 20201231_6</small></span></span></a>
-                    <!-- <a href="//www.smart-talk.io/download/apk/TBA.apk?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-ios">iOS용 다운로드</span></a> -->
+                    <a href="javascript:alert('준비중입니다.');" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-ios"></i><span class="btn-text">iOS용 다운로드<br><small>Version: 준비중입니다.</small></span></span></a>
                     <div class="" style="margin-top: 1rem;"><a href="/game/TBA_WG00_Astray/" style="color:#eee">다운로드가 오래 걸릴 땐 미로 탈출!!</a></div>
                     <div class="addthis_inline_share_toolbox"></div>
                 </div>
@@ -38,8 +38,10 @@
                     var reset_btn_time = function(){
                         $('[name=link-download]').each(function(){
                             let url = $(this).attr('href');
-                            $(this).attr('href', url.substr(0, url.indexOf('?v=')) + '?v='+(new Date().getTime()) );
-                        })
+                            if(url.indexOf('?v=')>-1) {
+                                $(this).attr('href', url.substr(0, url.indexOf('?v=')) + '?v='+(new Date().getTime()) );
+                            }
+                        });
                         setTimeout(reset_btn_time, 10000);
                     };
                     reset_btn_time();
