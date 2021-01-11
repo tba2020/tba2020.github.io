@@ -28,8 +28,10 @@
             <h1>TBA CITY</h1>
             <div id="button-box" class="button-box" data-shadow-color="0,0,0">
                 <div class="download-box">
-                    <a href="//www.smart-talk.io/download/files/TBA.apk?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-android"></i><span class="btn-text">Android 다운로드<br><small>Version: 20201231_113</small></span></span></a>
-                    <a href="//www.smart-talk.io/download/files/TBA.zip?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-windows"></i><span class="btn-text">Windows 다운로드<br><small>Version: 20201231_6</small></span></span></a>
+                    <!-- <a href="//www.smart-talk.io/download/files/TBA.apk?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-android"></i><span class="btn-text">Android 다운로드<br><small>Version: 20210111_121</small></span></span></a> -->
+                    <a href="https://www.dropbox.com/s/kjk1ftcy5fzdhrq/TBA.apk?dl=1&v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-android"></i><span class="btn-text">Android 다운로드<br><small>Version: 20210111_121</small></span></span></a>
+                    <!-- <a href="//www.smart-talk.io/download/files/TBA.zip?v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-windows"></i><span class="btn-text">Windows 다운로드<br><small>Version: 20210111_12</small></span></span></a> -->
+                    <a href="https://www.dropbox.com/s/dpsyh71p1u2udow/TBA.zip?dl=1&v=" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-windows"></i><span class="btn-text">Windows 다운로드<br><small>Version: 20210111_12</small></span></span></a>
                     <a href="javascript:alert('준비중입니다.');" target="_hidden_" name="link-download" id="link-download"><span class="btn btn-download"><i class="icon-ios"></i><span class="btn-text">iOS용 다운로드<br><small>Version: 준비중입니다.</small></span></span></a>
                     <div class="" style="margin-top: 1rem;"><a href="/game/TBA_WG00_Astray/" style="color:#eee">다운로드가 오래 걸릴 땐 미로 탈출!!</a></div>
                     <div class="addthis_inline_share_toolbox"></div>
@@ -40,6 +42,9 @@
                             let url = $(this).attr('href');
                             if(url.indexOf('?v=')>-1) {
                                 $(this).attr('href', url.substr(0, url.indexOf('?v=')) + '?v='+(new Date().getTime()) );
+                            }
+                            if(url.indexOf('&v=')>-1) {
+                                $(this).attr('href', url.substr(0, url.indexOf('&v=')) + '&v='+(new Date().getTime()) );
                             }
                         });
                         setTimeout(reset_btn_time, 10000);
