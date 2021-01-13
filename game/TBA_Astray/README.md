@@ -10,7 +10,7 @@ Thanks, Rye Terrell.
 3. [x] gyro(가속도계)로 이동
 4. [x] 스코어 적용 - 통과 Level
 5. [ ] 랭킹 적용 - 전세계랭킹
-6. [ ] 마지막 Level 저장
+6. [x] 마지막 Level 저장
 
 ## 실행
 
