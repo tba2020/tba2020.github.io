@@ -7,8 +7,8 @@ Thanks, Rye Terrell.
 
 1. [x] 이미지 변경 - TBACITY에 맞게
 2. [x] 다국어 - en, es, de, fr, ko, jp, zh
-3. [ ] gyro(가속도계)로 이동
-4. [ ] 스코어 적용 - 통과 Level
+3. [x] gyro(가속도계)로 이동
+4. [x] 스코어 적용 - 통과 Level
 5. [ ] 랭킹 적용 - 전세계랭킹
 6. [ ] 마지막 Level 저장
 
