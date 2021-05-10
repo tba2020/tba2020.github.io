@@ -1,0 +1,7 @@
+# Disallow
+User-agent: *
+Disallow: /emoticon
+
+# Allow
+User-agent: *
+Allow: /
