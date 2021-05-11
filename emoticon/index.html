@@ -3,6 +3,7 @@
 <head>
     <title>TBA 이모티콘</title>
     <style>
+        body {font-size:12px;line-height:16px}
         .style {position:absolute;top:1rem;right:1rem}
         .style button {display:inline-block;width:20px;height:20px;border:1px solid #000;cursor:pointer}
         .style button.white {background:white}
@@ -12,7 +13,7 @@
         .table_emoticon th {font-size:1.5rem;line-height: 3rem;background-color:#999}
         .table_emoticon td:first-child {width:200px;font-size:1.5rem}
         .table_emoticon td {text-align:center;padding:1rem}
-        .table_emoticon img {width:100%}
+        .table_emoticon img {width:100%;cursor:pointer}
     </style>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script>
@@ -24,6 +25,11 @@
                     'background-color':bgcolor,
                     'color':color
                 })
+            })
+            $('.table_emoticon img').on('click', function(){
+
+                let char_name = $(this).attr('src').match(/images\/(.[^-]*)-/)[1];
+                window.location.href="char.html?char_name="+char_name;
             })
         })
     </script>

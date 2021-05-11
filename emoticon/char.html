@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>TBA 이모티콘 - 캐릭터</title>
+    <style>
+		body{font-size:12px;line-height:16px}
+		a,a:hover,a:active{color:inherit;text-decoration:none;}
+		.style{position:absolute;top:1rem;right:1rem}
+		.style button{display:inline-block;width:20px;height:20px;border:1px solid#000;cursor:pointer}
+		.style button.white{background:white}
+		.style button.black{background:black}
+		.style button.gray{background:gray}
+		.div_emoticon{width:100%;background-color:transparent;padding:2%;margin:2%;max-width:830px;text-align:justify;}
+		.div_emoticon>div{display:inline-block;text-align:center;width:calc(96%/4 - 40px);padding:20px;}
+		.div_emoticon img{width:100%;}
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/php.default.min.js"></script>
+    <script>
+        jQuery(function() {
+            $('.style button').on('click', function() {
+                let bgcolor = $(this).attr('class');
+                let color = bgcolor == 'black' ? 'white' : 'black';
+                $('body').css({
+                    'background-color': bgcolor,
+                    'color': color
+                })
+            })
+			const char_name = getURLParameter('char_name');
+			if(char_name) {
+				$('#char-name').html(urldecode(char_name));
+				$('.div_emoticon img').each(function(){
+					let src = $(this).attr('src');
+					$(this).attr('src', src.replace('미개', char_name));
+				});
+				$('.div_emoticon').show();
+			} else {
+				alert('캐릭터 정보가 없습니다.');
+				window.location.back();
+			}
+        })
+    </script>
+</head>
+
+<body>
+    <h1><a href="./">TBA 이모티콘</a> - <span id="char-name"></span>캐릭터</h1>
+    <div class="style">
+        <button class="white"></button>
+        <button class="black"></button>
+        <button class="gray"></button>
+    </div>
+    <div class="div_emoticon" style="display:none">
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_01.gif"><br>Hellow</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_02.gif"><br>Adorbs</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_03.gif"><br>OMW</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_04.gif"><br>Have some ramen before you go.</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_05.gif"><br>OK</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_06.gif"><br>QQQQQQQ</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_07.gif"><br>YES</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_08.gif"><br>For real?</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_09.gif"><br>LUV IT</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_10.gif"><br>JOMO</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_11.gif"><br>Watch me</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_12.gif"><br>NAH</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_13.gif"><br>Pretty please</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_14.gif"><br>So alone</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_15.gif"><br>For the win</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_16.gif"><br>Sir</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_17.gif"><br>Really sorry</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_18.gif"><br>Me busy</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_19.gif"><br>PWNED</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_20.gif"><br>...</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_21.gif"><br>JSYK</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_22.gif"><br>Can't stop laughing</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_23.gif"><br>OMDB</div>
+        </div>
+        <div>
+            <div><img src="./images/미개-이모티콘-영문_24.gif"><br>NO</div>
+        </div>
+    </div>
+</body>
+
+</html>
