@@ -1,30 +1,27 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Fabrex - Multipurpose Business and Corporate Template
-    Description: Multipurpose Business and Corporate Template
+    Theme Name: Fabrex - One Page Portfolio
+    Description: One Page Portfolio Template
     Author: chitrakootweb
     Version: 3.1
 
 -----------------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------
-			[ All CSS Plugins & Default Classes File ]
+			[ All Css Plugins & Helper Classes File ]
 -----------------------------------------------------------------*/
 
 /* == bootstrap == */
 @import url("plugins/bootstrap.min.css");
 
-/* == animate css == */
+/* == animate Headline == */
 @import url("plugins/animate.css");
-
-/* == font awesome css == */
-@import url("plugins/fontawesome-all.min.css");
 
 /* == et-line icon font == */
 @import url("plugins/et-line.css");
 
-/* == icon moon == */
-@import url("plugins/icomoon.css");
+/* == fontawesome icon font == */
+@import url("plugins/fontawesome-all.min.css");
 
 /* == magnific-popup == */
 @import url("plugins/magnific-popup.css");
@@ -33,17 +30,8 @@
 @import url("plugins/owl.carousel.min.css");
 @import url("plugins/owl.theme.default.min.css");
 
-/* == zoom css == */
-@import url("plugins/xzoom.css");
-    
-/* == datepicker == */
-@import url("plugins/datepicker.css");
-    
-/* == default classes == */
+/* == helper classes == */
 @import url("plugins/default.css");
-
-/* == navigation == */
-@import url("plugins/nav-menu.css");
 
 /* == contact form classes == */
 @import url("plugins/mailform.css");

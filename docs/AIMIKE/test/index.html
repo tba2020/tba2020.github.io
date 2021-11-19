@@ -1,227 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- metas -->
-    <meta charset="utf-8">
-    <meta name="author" content="SCC" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="SCC" />
-    <meta name="description" content="SCC" />
-    <!-- title  -->
-    <title>SCC</title>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="img/logos/favicon.png">
-    <link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png">
+	<!-- metas -->
+	<meta charset="utf-8">
+	<meta name="author" content="SCC" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="SCC" />
+	<meta name="description" content="SCC" />
 
-    <!-- plugins -->
-    <link rel="stylesheet" href="css/plugins.css" />
+	<meta property="og:title" content="SCC">
+	<meta property="og:description" content="SCC Blockchain Tech">
+	<meta property="og:image" content="img/logo-color.png">
 
-    <!-- revolution slider css -->
-    <link rel="stylesheet" href="css/rev_slider/settings.css">
-    <link rel="stylesheet" href="css/rev_slider/layers.css">
-    <link rel="stylesheet" href="css/rev_slider/navigation.css">
+	<!-- title  -->
+	<title>SCC</title>
 
-    <!-- search css -->
-    <link rel="stylesheet" href="search/search.css" />
+	<!-- favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    <!-- custom css -->
-    <link href="css/styles-4.css" rel="stylesheet" id="colors">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/plugins.css" />
 
-	<script>
-	function snslink(){
-		var url = "https://www.instagram.com/ai.ai.sul.sul/";
-		window.open(url);
-	}
-	function playMusic(num){
-		alert(num);
-	}
-	</script>
+	<!-- core style css -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/styles.css" />
 
-	<style>
-	.m_hide { 
-			display: none;
-	}
-	@media screen and (max-width: 767px) { 
-		.main_center { 
-			width:25%;
+	<style type="text/css">
+		.demo-grid-wrapper .demo-grid-item-img {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			border: 10px solid #fff;
+			box-shadow: 0 0 45px 0 rgba(0, 0, 0, .15);
+			cursor: pointer;
+			overflow: hidden;
 		}
-		.main_side { 
-			width:65%;
+
+		.demo-grid-wrapper .demo-grid-item-img img {
+			width: 100%;
+		}
+
+		.demo-grid-wrapper .demo-grid-item-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-transition: background-color .3s ease-in;
+			transition: background-color .3s ease-in;
+			background-color: rgba(255, 255, 255, 0);
+		}
+
+		@keyframes animatedBackground {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 100% 0;
+			}
+		}
+
+		.bg-animate {
+			background-position: 0 0;
+			background-repeat: repeat-x;
+			animation: animatedBackground 30s linear infinite;
+		}
+
+		.bg-overlay:before {
+			background-color: rgba(0, 0, 0, 0.70);
+			content: "";
+			display: inline-block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.banner-words-wrapper {
+			display: inline-block;
+			position: relative;
+			text-align: left;
+			overflow: hidden;
+		}
+
+		.banner-words-wrapper b {
+			font-weight: 700;
+		}
+
+		.banner-words-wrapper b {
+			display: inline-block;
+			position: absolute;
+			white-space: nowrap;
+			left: 0;
+			top: 0;
+			text-transform: uppercase;
+			font-size: 58px;
+		}
+
+		.banner-words-wrapper b.is-visible {
+			position: relative;
+		}
+
+		.banner-headline.clip b {
+			opacity: 0;
+		}
+
+		.banner-headline b.is-visible {
+			opacity: 1;
+		}
+
+		.banner-headline .banner-words-wrapper:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 2px;
+			height: 90%;
+			background-color: rgba(255, 255, 255, 0.65);
+		}
+
+		@media screen and (max-width: 767px) {
+			.banner-words-wrapper b {
+				font-size: 32px;
+			}
+		}
+
+		.countup:after {
+			content: "+";
 		}
 		.m_hide { 
-			display: inline;
+			display: none;
 		}
-	}
+		@media screen and (max-width: 767px) { 
+			.main_center { 
+				width:25%;
+			}
+			.main_side { 
+				width:65%;
+			}
+			.m_hide { 
+				display: inline;
+			}
+		}
 
 	</style>
+
 </head>
 
 <body>
+	<!-- start page loading -->
+	<div id="preloader">
+		<div class="row loader">
+			<div class="loader-icon"></div>
+		</div>
+	</div>
+	<!-- end page loading -->
 
-    <!-- start page loading -->
-    <div id="preloader">
-        <div class="row loader">
-            <div class="loader-icon"></div>
+	<!-- start header -->
+	<header class="header" data-scroll-index="0">
+		<!-- start navbar -->
+		<nav class="navbar navbar-expand-lg border-none bg-medium-dark-gray">
+			<div class="container sm-padding-10px-tb sm-padding-15px-lr">
+				<!-- start logo -->
+				<a class="logo" href="javascript:void(0);" data-scroll-nav="0">
+					<img src="img/logo-light.png" alt="" title="o">
+				</a>
+				<!-- end Logo -->
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"><i class="fas fa-bars"></i></span>
+				</button>
+
+				<!-- navbar links -->
+				<div class="collapse navbar-collapse" id="navbarContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">METAVERSE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="2">AI</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="3">NFT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="4">BLOCKCHAIN</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end navbar links -->
+
+				<!--
+				<div>
+				&nbsp;&nbsp;
+				<a class="" href="lang.php?lang=en"><img src="img/flag-en.png" width=20></a>&nbsp;&nbsp;<a class="" href="lang.php?lang=kr"><img src="img/flag-kr.png" width=20></a>&nbsp;&nbsp;<a class="" href="lang.php?lang=es"><img src="img/flag-es.png" width=20></a>&nbsp;&nbsp;<a class="" href="lang.php?lang=zh"><img src="img/flag-zh.png"  width=20></a>
+				</div>
+				-->
+			</div>
+
+			<a href="javascript:void(0)" class="sidemenu_btn sm-display-none" id="sidebar_toggle">
+				<span></span> <span></span> <span></span>
+			</a>
+
+		</nav>
+		<!-- end navbar  -->
+		<!-- Start Sidemenu -->
+		<div class="side-menu black">
+			<div class="inner-wrapper">
+				<span class="btn-close" id="btn_sidebar_colse"></span>
+				<nav class="side-nav width-100">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="1">METAVERSE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="2">AI</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="3">NFT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0);" data-scroll-nav="4">BLCOCAHIN</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- End Sidemenu -->
+
+		<!-- Close Sidemenu -->
+		<a id="close_sidebar" href="javascript:void(0);"></a>
+		<!-- End Sidemenu -->
+
+	</header>
+	<!-- end header -->
+
+
+
+    <!-- Start banner Section -->
+    <section class="parallax" data-overlay-dark="1" data-background="img/bg/bg0.jpg">	       	
+		<div class="row" style="height:80vh" style="position: relative;">
+             <div class="col-md-12" style="position: absolute; top:50%; transform:translateY(-50%);">			 	
+                <div class="text-center center-col width-90 xs-width-100">
+					<img class="col-md-4 col-sm-12 no-padding main_side" src="img/bg/title-1.png">
+					<span class="m_hide"><br></span><img class="col-md-3 col-sm-0 no-padding main_center" src="img/bg/scc.png">
+					<span class="m_hide"><br></span><img class="col-md-4 col-sm-12 no-padding main_side" src="img/bg/title-2.png"> 
+				</div>
+				<div class="text-center center-col width-60 xs-width-100">
+					<img class="col-md-6 col-sm-12 no-padding main_side" src="img/bg/txt.png">
+                </div>
+			</div>
         </div>
-    </div>
-    <!-- end page loading -->
-
-    <!-- start main-wrapper section -->
-    <div class="main-wrapper">
-        <!-- start header section -->
-        <header>
-            <div class="navbar-default">
-
-                <!-- Start Top Search -->
-                <div class="top-search bg-theme">
-                    <div class="container">
-                        <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
-                            <div class="input-group">
-                                <span class="input-group-addon cursor-pointer">
-                                    <button class="search-form_submit fas fa-search font-size18 text-white" type="submit"></button>
-                                </span>
-                                <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
-                                <span class="input-group-addon close-search"><i class="fas fa-times font-size18 line-height-28 margin-5px-top"></i></span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- End Top Search -->
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-lg-12">
-                            <div class="menu_area alt-font">
-                                <nav class="navbar navbar-expand-lg navbar-light no-padding">
-
-                                    <div class="navbar-header navbar-header-custom">
-                                        <!-- Start Logo -->
-                                        <a href="index.html" class="navbar-brand logodefault"><img id="logo" src="img/logos/logo.png" alt="logo"></a>
-                                        <!-- End Logo -->
-                                    </div>
-
-                                    <div class="navbar-toggler"></div>
-
-                                    <!-- Menu Area -->
-                                    <ul class="navbar-nav ml-auto" id="nav" style="display: none;">
-                                        <li><a href="#1">METAVERSE</a></li>
-										<li><a href="#2">NFT</a></li>
-										<li><a href="#3">AI</a></li>
-										<li><a href="#4">BLOCKCHAIN</a></li>
-                                        <!--<li><a href="javascript:snslink();"><i class="fab fa-instagram"></i></a></li>-->
-                                    </ul>
-									</div>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- end header section -->
+    </section>
+    <!-- end banner Section -->
 
 
+<div data-scroll-index="1">
+	<!-- 01 section -->
+	<section id="" class="parallax" data-overlay-dark="0" data-background="img/bg/bg1.jpg">
 
-        <!-- Start banner Section -->
-        <section class="parallax screen-height" data-overlay-dark="1" data-background="img/bg/bg0.jpg">
-            <div class="absolute-middle-center z-index-1 width-100">
-                <!--<div class="container">-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center center-col width-80 xs-width-100">
-								<img class="col-md-4 col-sm-12 no-padding main_side" src="img/bg/title-1.png">
-								<span class="m_hide"><br></span><img class="col-md-3 col-sm-0 no-padding main_center" src="img/bg/scc.png">
-								<span class="m_hide"><br></span><img class="col-md-4 col-sm-12 no-padding main_side" src="img/bg/title-2.png"> 
-							</div>
-							<div class="text-center center-col width-60 xs-width-100">
-								<img class="col-md-6 col-sm-12 no-padding main_side" src="img/bg/txt.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end banner Section -->
-
-		
-		<!-- start project section -->
-        <section id="1">
-
-            <div class="container">
+			<div class="container">
 				<div class="section-heading">
 				<h3>METAVERSE PLATFORM</h3>
+				<p>네트워크 게임 구현 기술과 블록체인 기술을 활용한 가상현실 생태계의 실현</p>
             </div>
             <div class="container">
+                <div align="center">
+	                    <div class="col-lg-9 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+							<img alt="img" src="img/meta/meta.png"/>
+						</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-1.jpg" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-2.jpg" />
+                            </div>
+                        </div>							
+					</div>
+				</div> 
+			</div> 
+	</section>
+	<!-- 01 section end -->
+
+	<!-- 02 section -->
+	<section id="" class="parallax" data-overlay-dark="5" data-background="img/bg/bg2.jpg">
+            <div class="container">
+                <div class="section-heading white">
+                    <h3>METAVERS IN YOUR LIFE</h3>
+					<p>당신의 삶 가까이 다가온 미래 기술</p>
+                </div>
+			</div>
+            <div class="container">
                 <div class="row">
-                    <div class="gallery text-center width-100">
-                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
-                            <div class="project-grid-style2">
-                                <div class="project-details">
-                                    <img src="img/meta/meta-1.jpg" alt="">
-                                   </div>
-                                <div class="portfolio-title">
-                                    <p>TBA CITY GAME</p>
-                                    <h4>메타버스 기반 역할 게임으로 모이는 캐릭터들</h4>
-                                </div>
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-3.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;" align="center">비대면 시대에서도 생생하고 행복한 예식문화를 즐길 수 있는 가상공간 제공</h4>                                
                             </div>
                         </div>
-
-                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
-                            <div class="project-grid-style2">
-                                <div class="project-details">
-                                    <img src="img/meta/meta-2.jpg" alt="">
-                                </div>
-                                <div class="portfolio-title">
-                                    <p>TBA CITY GAME</p>
-                                    <h4>주민과 감염자끼리 서로 치열한 머리 싸움</h4>
-                                </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-4.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;" align="center">시간과 장소에 구애 받지 않고 언제 어디서나 전문적인 코칭이 가능한 시스템</h4>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-5.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;" align="center">옷가게를 가지 않아도 자신에게 가장 어울리는 옷을 고를수 있는 쇼핑몰</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-6.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;" align="center">전세계 어디의 누구와도 가상공간에서 화상 커뮤니케이션 가능</h4>
+                            </div>
+                        </div>							
 					</div>
-					<div class="gallery text-center width-100">
-                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
-                            <div class="project-grid-style2">
-                                <div class="project-details">
-                                    <img src="img/meta/meta-3.jpg" alt="">
-                                </div>
-                                <div class="portfolio-title">
-                                    <p>TBA CITY GAME</p>
-                                    <h4>버리진 도시 TBA 친구들의 두번째 고향</h4>
-                                </div>
-                            </div>
-                        </div>
+				</div>                
+            </div>		
+	</section>
 
-                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
-                            <div class="project-grid-style2">
-                                <div class="project-details">
-                                    <img src="img/meta/meta-4.jpg" alt="">
-                                </div>
-                                <div class="portfolio-title">
-                                    <p>TBA CITY GAME</p>
-                                    <h4>놀이동산에서 벌어지는 생존 게임</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
-                            <div class="project-grid-style2">
-                                <div class="project-details">
-                                    <img src="img/meta/meta-5.jpg" alt="">
-                                </div>
-                                <div class="portfolio-title">
-                                    <p>TBA CITY GAME</p>
-                                    <h4>스포츠도 즐기고 서바이벌 게임도 즐기고</h4>
-                                </div>
-                            </div>
-                        </div>
+
+	<section id="" class="parallax">
+          <div class="container">
+				<div class="section-heading">
+				<h3>AI SAFE SYSTEM</h3>
+				<p style="word-break: keep-all;">자동차와 운전자의 상태를 종합적으로 판단하고 HUD를 통해 연료 부족, 과속, 운전자의 졸음으로 인한 문제를 근본적으로 차단하여<br>편리하고 안전한 운전이 되도록 돕는 기술</p>
+            </div>
+            <div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-7.jpg" />
+							</div>
+						</div>
 					</div>
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-8.jpg" />
+                            </div>
+                        </div>							
+					</div>
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-9.jpg" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<div class="service-simple">
+							<div class="overflow-hidden">
+								<img alt="img" src="img/meta/meta-10.jpg" />
+                            </div>
+                        </div>							
+					</div>
+				</div>                
+            </div>
+    </section>
+
+
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg3.jpg">
+            <div class="container">
+                <div class="section-heading white">
+                    <h3>TBA CITY ONLINE</h3>
+					<p>APP으로 즐기는 가상 현실 속에서의 생존 게임</p>
+                </div>
+			</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-11.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;">메타버스 기반 역할 게임으로 모이는 캐릭터들</h4>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-12.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;">주민과 감염자끼리 서로 치열한 머리 싸움</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-13.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;">1st Story - Lost Demolition City</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-14.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;">2nd Story - Amusement Park</h4>
+                            </div>
+                        </div>							
+					</div>
+                    <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/meta/meta-15.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <h4 style="word-break: keep-all;">3rd Story - Sports Center</h4>
+                            </div>
+                        </div>							
+					</div>
+				</div>                
+            </div>
+    </section>
+
+	<section id="" class="parallax" >
+          <div class="container">
+				<div class="section-heading">
+				<h3>Sports & Casual Games</h3>
+				<p>가상공간에서 나의 아바타와 함께 즐기는 스포츠 액션</p>
+            </div>
+            <div class="container">
+				<div class="row">
 					<div class="gallery text-center width-100">
                          <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-7.jpg" alt="">
+                                    <img src="img/meta/meta-21.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA SPORTS</p>
@@ -233,7 +479,7 @@
                         <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-8.jpg" alt="">
+                                    <img src="img/meta/meta-22.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA SPORTS</p>
@@ -245,7 +491,7 @@
                         <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-9.jpg" alt="">
+                                    <img src="img/meta/meta-23.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA SPORTS</p>
@@ -256,7 +502,7 @@
                         <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-10.jpg" alt="">
+                                    <img src="img/meta/meta-24.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA SPORTS</p>
@@ -269,7 +515,7 @@
                         <div class="col-lg-3 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-15.jpg" alt="">
+                                    <img src="img/meta/meta-25.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA OX QUIZ GAME</p>
@@ -277,11 +523,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-lg-3 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-16.jpg" alt="">
+                                    <img src="img/meta/meta-26.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>TBA OX QUIZ GAME</p>
@@ -292,7 +537,7 @@
                         <div class="col-lg-3 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-17.jpg" alt="">
+                                    <img src="img/meta/meta-27.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>MINING GAME</p>
@@ -303,7 +548,7 @@
                         <div class="col-lg-3 col-md-6 margin-30px-bottom items design">
                             <div class="project-grid-style2">
                                 <div class="project-details">
-                                    <img src="img/meta/meta-18.jpg" alt="">
+                                    <img src="img/meta/meta-28.jpg" alt="">
                                 </div>
                                 <div class="portfolio-title">
                                     <p>MINING GAME</p>
@@ -314,16 +559,133 @@
 					</div>
 				</div>                
             </div>
-        </section>
-        <!-- end project section -->
-	
-		<!-- start section -->
-		<section id="2" class="parallax" data-overlay-dark="2" data-background="img/bg/bg1.jpg">
-            <div class="container">
+    </section>
+
+</div>
+<div data-scroll-index="2">
+
+<!-- 2번째 --->
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg4.jpg">
+          <div class="container">
                 <div class="section-heading white">
-                    <h3>AI Project</h3>
+                    <h3>AI*SUL Project</h3>
+					<p>인간보다 인간적인 휴머니즘 캐릭터</p>
                 </div>
-                <div class="row">
+               <div align="center">
+	                <div class="col-lg-8 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<img alt="img" src="img/ai/ai-sul.png"/>
+					</div>
+				</div>
+ 
+            </div>
+    </section>
+
+	<section id="" class="parallax">
+          <div class="container">
+                <div class="section-heading">
+                    <h3>AI*SUL FITNESS</h3>
+                </div>
+				<div class="row">
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/fitness-1.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <div style="word-break: keep-all; text-align:center">AI가 관리해주는 나만의 건강 트레이너</div>             
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/fitness-2.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <div style="word-break: keep-all; text-align:center">나에게 가장 최적의 운동방법은 물론 체계적인 관리까지</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg5.jpg">
+          <div class="container">
+                <div class="section-heading white">
+                    <h3>AI*SUL META CAFE</h3>
+                </div>
+				<div class="row">
+                    <div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-1.jpg" />
+							</div>
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-2.jpg" />
+							</div>
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-3.jpg" />
+							</div>
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-4.jpg" />
+							</div>
+						</div>
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="col-lg-4 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-5.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <div style="word-break: keep-all; text-align:center">AI를 통해 더욱 진화하는 무인카페 솔류션</div>             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-6.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <div style="word-break: keep-all; text-align:center">AI가 먼저 체크하여 관리자에게 대응상황을 제안</div>             
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+                        <div class="service-simple">
+                            <div class="overflow-hidden">
+                                <img alt="img" src="img/ai/cafe-7.jpg" />
+                            </div>
+                            <div class="service-simple-inner">
+                                <div style="word-break: keep-all; text-align:center">AI와 원격제어 기술이 만나 더욱 편리하고 친근한 카페 영업</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+	<section id="" class="parallax">
+          <div class="container">
+                <div class="section-heading">
+                    <h3>APP Based AI Technology</h3>
+                </div>
+				<div class="row">
                     <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
                         <div class="service-simple">
                             <div class="overflow-hidden">
@@ -364,17 +726,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- start we offer section -->
+			</div>
+    </section>
+</div>
 
+<div  data-scroll-index="3">
 
-        <!-- start project section -->
-        <section id="3">
-
-            <div class="container">
-				<div class="section-heading">
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg5.jpg">
+        <div class="container">
+			<div class="section-heading white">
 				<h3>NFT Exchange</h3>
+				<p>블록체인을 넘어서 새로운 가치 창출의 시대를 위한 기술</p>
+		        <div align="center">
+			        <div class="col-lg-8 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<img alt="img" src="img/nft/nft.png"/>
+					</div>
+				</div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
@@ -439,19 +806,32 @@
                 </div>		
             </div>                
         </div>            
-        </section>
-        <!-- end project section -->
+    </section>
 
+</div>
+<div data-scroll-index="4" data-background="img/bg/bg6.jpg">
 
-		<!-- start section -->
-		<section id="4" class="parallax" data-overlay-dark="2" data-background="img/bg/bg2.jpg">
-            <div class="container">
-                <div class="section-heading white">
+	<section id="" class="parallax">
+           <div class="container">
+                <div class="section-heading">
                     <h3>Blockchain Technology</h3>
+					<p>단순한 가상화폐가 아닌 METAVERSE 확장 세계관의 핵심 기술</p>
                 </div>
+		        <div align="center">
+			        <div class="col-lg-8 col-md-12 margin-30px-bottom sm-margin-20px-bottom">
+						<img alt="img" src="img/blockchain/blockchain.png"/>
+					</div>
+				</div>
+            </div>
+	</section>
 
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg7.jpg">
+           <div class="container">
+                <div class="section-heading white">
+                    <h3>Personl Talk</h3>
+					<p>Blockchain 기술이 적용된 신개념의 Communication Tool</p>
+                </div>
 				<div class="row">
-
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
 						<div class="service-simple">
 							<div class="overflow-hidden">
@@ -465,20 +845,6 @@
 							</div>
 						</div>
 					</div>
-<!--					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-02.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Personal Talk</p>
-                                    <h4>다양한 채팅 아이템 제공</h4>
-								</div>
-							</div>
-						</div>
-					</div>
--->
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
 						<div class="service-simple">
 							<div class="overflow-hidden">
@@ -492,34 +858,6 @@
 							</div>
 						</div>
 					</div>
-<!--
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-04.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Personal Talk</p>
-                                    <h4>귀엽고 재미있는 캐릭터를 활용하여 커뮤니케이션에 재미를 더함</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-05.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Personal Talk</p>
-                                    <h4>추천, 비추천, 경고 등을 통하여 구성원끼리 서로의 콘텐츠를 평가</h4>
-								</div>
-							</div>
-						</div>
-					</div>
--->
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
 						<div class="service-simple">
 							<div class="overflow-hidden">
@@ -533,52 +871,66 @@
 							</div>
 						</div>
 					</div>
+			</div>
+	</section>
 
-
+	<section id="" class="parallax">
+           <div class="container">
+                <div class="section-heading">
+                    <h3>Smart Wallet</h3>
+					<p>스마트 월렛을 통해 더욱 빠르고 편리한 코인 및 PAY 결제</p>
+                </div>
+				<div class="row">
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/wallet-1.png" />
+							<div class="service-simple">
+								<div class="overflow-hidden">
+									<img alt="img" src="img/blockchain/wallet-1.png" />
+								</div>
+								<div class="service-simple-inner">
+									<div style="word-break: keep-all;" align="center">
+										<p>Smart Wallet</p>
+										<h4>Personal Talk에는 전자지갑아 포함되어 주소복사 및 QR 스캔을 통한 거래 기능을 지원</h4>
+									</div>
+								</div>
 							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Smart Wallet</p>
-                                    <h4>Personal Talk에는 전자지갑아 포함되어 주소복사 및 QR 스캔을 통한 거래 기능을 지원</h4>
+						</div>
+						<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+							<div class="service-simple">
+								<div class="overflow-hidden">
+									<img alt="img" src="img/blockchain/wallet-2.png" />
+								</div>
+								<div class="service-simple-inner">
+									<div style="word-break: keep-all;" align="center">
+										<p>Smart Wallet</p>
+										<h4>Personal Talk과 결합되어 스마트 Point와 PAY를 사용할 수 있는 전자지갑</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+							<div class="service-simple">
+								<div class="overflow-hidden">
+									<img alt="img" src="img/blockchain/wallet-3.png" />
+								</div>
+								<div class="service-simple-inner">
+									<div style="word-break: keep-all;" align="center">
+										<p>Smart Wallet</p>
+										<h4>다양한 결제 방식을 통해 Point, PAY 충전 및 가상화폐와 같이 자유롭게 온라인 결제 및 거래 가능</h4>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/wallet-2.png" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Smart Wallet</p>
-                                    <h4>Personal Talk과 결합되어 스마트 Point와 PAY를 사용할 수 있는 전자지갑</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/wallet-3.png" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>Smart Wallet</p>
-                                    <h4>다양한 결제 방식을 통해 Point, PAY 충전 및 가상화폐와 같이 자유롭게 온라인 결제 및 거래 가능</h4>
-								</div>
-							</div>
-						</div>
-					</div>
+				</div>
+	</section>
 
-
-
-
-
+	<section id="" class="parallax" data-overlay-dark="4" data-background="img/bg/bg8.jpg">
+           <div class="container">
+                <div class="section-heading white">
+                    <h3>Visual Chatting</h3>
+					<p>AI가 당신의 모든 것을 분석하여 가장 적합한 Socal Communication을 제안한다</p>
+                </div>
+				<div class="row">
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
 						<div class="service-simple">
 							<div class="overflow-hidden">
@@ -618,6 +970,17 @@
 							</div>
 						</div>
 					</div>
+			</div>
+	</section>
+
+
+	<section id="" class="parallax">
+           <div class="container">
+                <div class="section-heading">
+                    <h3>AI Scheduler</h3>
+					<p>일상의 계획부터 실행까지 시간관리를 책임지는 AI 그 이상의 AI 비서</p>
+                </div>
+				<div class="row">
 					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
 						<div class="service-simple">
 							<div class="overflow-hidden">
@@ -697,162 +1060,83 @@
 						</div>
 					</div>
 
-
-<!--
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-16.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>AI Scheduler</p>
-                                    <h4>FITNESS 프로그램을 통해 사용자에게 적합한 운동과 구체적인 방법을 제공</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-17.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>AI Scheduler</p>
-                                    <h4>사용자의 운동방법에 적합한 정보(시간, 거리, 소모 칼로리) 등을 체계적으로 분석</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
-						<div class="service-simple">
-							<div class="overflow-hidden">
-								<img alt="img" src="img/blockchain/bc-18.jpg" />
-							</div>
-							<div class="service-simple-inner">
-								<div style="word-break: keep-all;" align="center">
-									<p>AI Scheduler</p>
-                                    <h4>운동 뿐 아니라 다이어트 방법과 성취율을 수시로 체크해주는 종합적인 건강관리 앱</h4>
-								</div>
-							</div>
-						</div>
-					</div>
--->
-
-
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
-        </section>
-        <!-- start we offer section -->
+    </section>
+</div>
 
 
-	    <!--  start footer section -->
-	    <footer class="bg-black">
-		    <div class="footer-bottom">
-			    <div class="container">
-				    <div class="row">
-					    <div class="col-md-12 col-sm-12 text-center">
-						    <span class="font-size13 text-uppercase letter-spacing-1 text-light-gray">Project by SCC Co., Ltd. ⓒ All rights reserved</span>
-	                    </div>
-		            </div>
-			    </div>
-	        </div>
-		    <div id="back-to-top" class="back-to-top reveal">
-			    <i class="fa fa-angle-up"></i>
-	        </div>
-	    </footer>
-		<!--  end footer section -->
 
-    </div>
-    <!-- end main-wrapper section -->
+    <!-- start footer section -->
+    <footer>
+        <div class="container">
+            <div class="row margin-30px-bottom padding-30px-bottom">
 
-	<!-- start scroll to top -->
-    <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
-    <!-- end scroll to top -->
+                <div class="col-lg-3 col-md-12 sm-margin-30px-bottom text-center">
+
+                    <h3 class="footer-title-style4 text-white">Company</h3>
+                    <p class="font-size16">SCC Blockchain Tech Inc</p>
+
+                </div>
+
+                <div class="col-lg-6 col-md-12 sm-margin-30px-bottom text-center">
+                    <h3 class="footer-title-style4 text-white">Location</h3>
+                    <p class="font-size16">825 3RD AVE 31 FL, NEW YORK, NY, United States, 10022<br>DOS ID: 5381205</p>
+                </div>
+
+                <div class="col-lg-3 col-md-12 text-center">
+                    <h3 class="footer-title-style4 text-white">Email</h3>
+                    <p class="font-size16">SCCwallet@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer-bar">
+            <div class="container">
+                <p class="xs-font-size13">Copyright by SCC Blockchain Tech Pte. Ltd ©2019 All right reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer section -->
 
 
-    <!-- all js include start -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+	<!-- all js include start -->
 
-    <!-- modernizr js -->
-    <script src="js/modernizr.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
 
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+	<!-- popper.min -->
+	<script src="js/popper.min.js"></script>
 
-    <!-- navigation -->
-    <script src="js/nav-menu.js"></script>
+	<!-- bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
 
-    <!-- serch -->
-    <script src="search/search.js"></script>
+	<!-- scrollIt -->
+	<script src="js/scrollIt.min.js"></script>
 
-    <!-- tab -->
-    <script src="js/easy.responsive.tabs.js"></script>
+	<!-- stellar js -->
+	<script src="js/jquery.stellar.min.js"></script>
 
-    <!-- owl carousel -->
-    <script src="js/owl.carousel.min.js"></script>
+	<!-- jquery.magnific-popup js -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
 
-    <!-- jquery.counterup.min -->
-    <script src="js/jquery.counterup.min.js"></script>
+	<!-- owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
 
-    <!-- stellar js -->
-    <script src="js/jquery.stellar.min.js"></script>
+	<!-- isotope.pkgd.min js -->
+	<script src="js/isotope.pkgd.min.js"></script>
 
-    <!-- waypoints js -->
-    <script src="js/waypoints.min.js"></script>
+	<!-- custom scripts -->
+	<script src="js/main.js"></script>
+	<!--<script src="js/main2.js"></script>-->
 
-    <!-- tab js -->
-    <script src="js/tabs.min.js"></script>
+	<!-- contact form scripts -->
+	<script src="js/mailform/jquery.form.min.js"></script>
+	<script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
 
-    <!-- countdown js -->
-    <script src="js/countdown.js"></script>
-
-    <!-- jquery.magnific-popup js -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-
-    <!-- isotope.pkgd.min js -->
-    <script src="js/isotope.pkgd.min.js"></script>
-
-    <!--  chart js -->
-    <script src="js/chart.min.js"></script>
-
-    <!-- revolution slider js files start -->
-    <script src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
-    <script src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.actions.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.migration.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="js/rev_slider/extensions/revolution.extension.video.min.js"></script>
-    <!-- revolution slider js files end -->
-
-    <!-- map js -->
-    <script src="js/map.js"></script>
-
-    <!-- custom scripts -->
-    <script src="js/main.js"></script>
-
-    <!-- contact form scripts -->
-    <script src="js/mailform/jquery.form.min.js"></script>
-    <script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
-
-    <!-- all js include end -->
+	<!-- all js include end -->
 
 </body>
 </html>

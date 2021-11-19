@@ -79,13 +79,18 @@ ul li { list-style: none; }
 .main-font {font-family: 'Open Sans', sans-serif;}
 
 /* heading */
-h1, h2, h3, h4, h5, h6 {margin:0 0 20px; padding:0; letter-spacing: 0; font-weight: 600; font-family: 'Montserrat', sans-serif; color: #232323; line-height: normal;}
+h1, h2, h3, h4, h5, h6, h7, h11, h12, h13 {margin:0 0 20px; padding:0; letter-spacing: 0; font-weight: 600; font-family: 'Montserrat', sans-serif; color: #232323; line-height: normal;}
 h1 {font-size:42px;}
 h2 {font-size:34px;}
 h3 {font-size:32px;}
 h4 {font-size:30px;}
 h5 {font-size:26px;}
 h6 {font-size:22px;}
+h7 {font-size:20px;}
+
+h11 {font-size:40px; font-weight: 400;}
+h12 {font-size:110px; font-weight: 850;}
+h13 {font-size:90px; font-weight: 750;}
 
 /* font size */
 .font-size11 {font-size:11px;}
@@ -115,11 +120,18 @@ h6 {font-size:22px;}
 .font-size50 {font-size:50px;}
 .font-size55 {font-size:55px;}
 .font-size60 {font-size:60px;}
+.font-size70 {font-size:70px;}
 .font-size80 {font-size:80px;}
+.font-size90 {font-size:90px;}
 .font-size100 {font-size: 100px;}
 .font-size120 {font-size: 120px;}
 .font-size130 {font-size: 130px;}
-.font-size200 {font-size: 200px;}
+.font-size140 {font-size: 140px;}
+.font-size150 {font-size: 150px;}
+.font-size160 {font-size: 160px;}
+.font-size170 {font-size: 170px;}
+.font-size180 {font-size: 180px;}
+
 
 /* text color */
 .text-white {color:#fff;}
@@ -1663,13 +1675,14 @@ section {padding: 90px 0; overflow: hidden; background: #fff;}
     .md-height-auto { height: auto; }
 
     /* typography */
-    h1, h2, h3, h4, h5, h6 {margin:0 0 18px; padding:0; letter-spacing: 0; }
+    h1, h2, h3, h4, h5, h6, h7 {margin:0 0 18px; padding:0; letter-spacing: 0; }
     h1 {font-size:40px;}
     h2 {font-size:32px;}
     h3 {font-size:30px;}
     h4 {font-size:28px;}
     h5 {font-size:24px;}
     h6 {font-size:20px;}
+    h7 {font-size:18px;}
 
     /* line height */
     .md-line-height-normal {line-height:normal;}
@@ -2861,13 +2874,21 @@ section {padding: 90px 0; overflow: hidden; background: #fff;}
     .sm-height-auto { height: auto; }
 
     /* typography */
-    h1, h2, h3, h4, h5, h6 {margin:0 0 16px; padding:0; letter-spacing: 0;}
+    h1, h2, h3, h4, h5, h6, h11, h12, h13 {margin:0 0 16px; padding:0; letter-spacing: 0;}
     h1 {font-size:38px;}
     h2 {font-size:30px;}
     h3 {font-size:28px;}
     h4 {font-size:26px;}
     h5 {font-size:22px;}
     h6 {font-size:18px;}
+
+	h11 {font-size:40px; font-weight: 200;}
+	h12 {font-size:110px; font-weight: 850;}
+	h13 {font-size:90px; font-weight: 750;}
+
+
+
+
     p { margin: 0 0 20px; }
 
     /* font size */
@@ -2898,8 +2919,12 @@ section {padding: 90px 0; overflow: hidden; background: #fff;}
     .sm-font-size50 {font-size:50px;}
     .sm-font-size55 {font-size:55px;}
     .sm-font-size60 {font-size:60px;}
+    .sm-font-size70 {font-size:70px;}
     .sm-font-size80 {font-size:80px;}
+    .sm-font-size90 {font-size:90px;}
     .sm-font-size100 {font-size: 100px;}
+    .sm-font-size105 {font-size: 105px;}
+    .sm-font-size110 {font-size: 110px;}
     .sm-font-size120 {font-size: 120px;}
     .sm-font-size130 {font-size: 130px;} 
 
