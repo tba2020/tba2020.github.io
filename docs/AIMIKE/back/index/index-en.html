@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="TBA Family" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="TBA Family" />
+    <meta name="description" content="TBA Family" />
+
+    <!-- title  -->
+    <title>TBA Family</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logos/favicon.png">
+    <link rel="apple-touch-icon" href="img/logos/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logos/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logos/apple-touch-icon-114x114.png">
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/plugins.css" />
+
+    <!-- revolution slider css -->
+    <link rel="stylesheet" href="css/rev_slider/settings.css">
+    <link rel="stylesheet" href="css/rev_slider/layers.css">
+    <link rel="stylesheet" href="css/rev_slider/navigation.css">
+
+    <!-- search css -->
+    <link rel="stylesheet" href="search/search.css" />
+
+    <!-- custom css -->
+    <link href="css/styles-2.css" rel="stylesheet" id="colors">
+
+	<script>
+	function snslink(){
+		var url = "https://www.instagram.com/ai.ai.sul.sul/";
+		window.open(url);
+	}
+	function goYoutube(num){
+		var youtubeArray = [];
+		youtubeArray.push("https://www.youtube.com/watch?v=i-JSOqJeIvQ");
+		youtubeArray.push("https://www.youtube.com/watch?v=fSM57BMVyE4");
+		youtubeArray.push("https://www.youtube.com/watch?v=TjXUBp7z0BI");
+		youtubeArray.push("https://www.youtube.com/watch?v=MICSdBBAL6A");
+		window.open(youtubeArray[num-1]);
+	}
+	function goInstagram(num){
+		var urlArray=[];
+		urlArray.push("https://www.instagram.com/miketba/?utm_medium=copy_link");
+		urlArray.push("https://www.instagram.com/mikotba/?utm_medium=copy_link");
+		window.open(urlArray[num-1]);
+	}
+	</script>
+	<style>
+	@media screen and (max-width: 991px) {
+		#box_lang {position: absolute;    right: 55px;}
+	}
+
+
+	/* 비디오 넣는다고 추가함 */
+	.video {
+		position: relative; 
+	    padding-top: 56.25%;
+	    top: 0; 
+	    left: 0;
+		
+	    overflow:hidden; 
+	}
+	.video iframe,
+	.video object,
+	.video embed { 
+	    position: absolute; 
+		width:100%;
+		height:100%;
+
+	   
+	}
+     </style>
+	 <style>
+table, th, td {
+  border:10px solid black;
+}
+</style>
+</head>
+
+<body>
+
+	<!-- start page loading -->
+    <div id="preloader">
+        <div class="row loader">
+            <div class="loader-icon"></div>
+        </div>
+    </div>
+    <!-- end page loading -->
+
+    <!-- start main-wrapper section -->
+    <div class="main-wrapper">
+        <!-- start header section -->
+        <header>
+            <div class="navbar-default">
+
+                <!-- Start Top Search -->
+                <div class="top-search bg-theme">
+                    <div class="container">
+                        <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+                            <div class="input-group">
+                                <span class="input-group-addon cursor-pointer">
+                                    <button class="search-form_submit fas fa-search font-size18 text-white" type="submit"></button>
+                                </span>
+                                <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+                                <span class="input-group-addon close-search"><i class="fas fa-times font-size18 line-height-28 margin-5px-top"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu_area alt-font">
+                                <nav class="navbar navbar-expand-lg navbar-light no-padding">
+
+                                    <div class="navbar-header navbar-header-custom">
+                                        <!-- Start Logo -->
+                                        <a href="index.html" class="navbar-brand logodefault"><img id="logo" src="img/logos/logo.png" alt="logo"></a>
+                                        <!-- End Logo -->
+                                    </div>
+
+                                    <div class="navbar-toggler"></div>
+
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto" id="nav" style="display: none;">
+                                        <li><a href="#game">GAME & APP</a></li>
+										<li><a href="#youtube">Youtube</a></li>
+										<li><a href="#product">Product</a></li>
+										<li><a href="#book">Book</a></li>
+										<li><a href="#instagram">Instagram</a></li>
+										<li><a href="#friends">Friends</a></li>
+										<li><a href="#contact">Contact</a></li>
+										<!--<li><a href="javascript:snslink();"><i class="fab fa-instagram"></i></a></li>-->
+                                    </ul>
+                                    <!-- End Menu Area -->									
+									<div id="box_lang">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a class="" href="lang.php?lang=en"><img src="img/flag-en.png" width=24></a>&nbsp;&nbsp;
+									<a class="" href="lang.php?lang=kr"><img src="img/flag-kr.png" width=24></a>&nbsp;&nbsp;
+									<!--<a class="" href="lang.php?lang=zh"><img src="img/flag-zh.png" width=24></a>-->
+									<!--<a class="" href="lang.php?lang=jp"><img src="img/flag-jp.png" width=30></a>-->
+									</div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header section -->
+
+        <!-- start slideshow-->
+        <div class="container-fluid full-screen" id="ai-sul">
+            <div class="row slider-fade">
+                <div class="owl-carousel owl-theme width-100">
+                    <div class="text-center item bg-img" data-overlay-dark="4" width="100%">
+					<video muted autoplay loop poster="video/intro.jpg" source src="video/intro.mp4" type=video/mp4>
+						</video>
+                        <div class="absolute-middle-center caption">
+                        <!-- Start banner Content -->
+                            <h5 class="no-margin font-size24 xs-font-size16 text-medium-gray text-light-gray">With Friends</h5>
+                            <h5 class="text-uppercase font-size100 font-weight-700 md-font-size60 sm-font-size40 xs-font-size50  margin-20px-bottom text-white">TBA Family</h1>
+                        </div>
+                        <!-- End banner Content -->
+                    </div>
+				</div>
+            </div>
+        </div>
+        <!-- end slideshow-->		
+
+		<!-- start 1 section -->
+		<section id="game">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">TBA CITY ONLINE</h3>
+                    <p class="width-55 sm-width-75 xs-width-95 center-col">Will you protect your friends from the deadly zombie virus? Or will you betray your friends?<br> A survival strategy network game where you fight your destiny!</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="gallery text-center width-100">
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-1.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>치명적 바이러스로 동물친구들의 보금자리를 파괴하는 인간들</p>
+                                    <h4>시작 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-2.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>중앙 홀에서 하나 둘 씩 모이는 동물들</p>
+                                    <h4>게임 시작 대기 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-3.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>채팅을 통해 게임을 시작하는 친구들</p>
+                                    <h4>채팅 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-4.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>Family(친구들)와 Infector(감염자)중 랜덤하게 역할 부여</p>
+                                    <h4>역할 결정 화면 : Family</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-5.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>Family들은 주어진 미션을 수행</p>
+                                    <h4>미션 수행 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-6.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>미션을 모두 수행하거나 감염자가 누군지 밝히면 Family의 승리</p>
+                                    <h4>미션 수행 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-7.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>Infector를 주의하라. 혼자서는 절대 이길 수 없다!</p>
+                                    <h4>Infector에게 공격당하는 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-8.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>Infetor가 되면 은밀하게 행동하고 지혜롭게 속여야 한다</p>
+                                    <h4>역할 결정 화면 : Infector</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-9.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>Family를 잘 속여 내부분열을 유도하라</p>
+                                    <h4>엉뚱한 친구를 Infector로 지명하는 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/1-10.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <p>모든 친구들을 감염시키면 당신이 승리한다</p>
+                                    <h4>Infector 승리 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>                
+            </div>            
+        </section>
+        <!-- end 1 section -->
+
+		<!-- start 2 section -->
+		<section id="" class="parallax" data-overlay-dark="0" data-background="img/bg/bg-gray.jpg">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">AI MIKE</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">
+					AI MIKE에게 말을 걸어주세요! 이름이 뭐니? 몇 살이야? 춤춰봐! 잘하는게 뭐니?<br>
+					다양하게 질문해 보세요. 엉뚱발랄한 AI MIKE의 대답을 들을 수 있어요<br>
+					한국말 뿐 아니라 영어 발음도 끝내주는 네이티브 MIKE에게 지금 말을 걸어주세요!</p>
+				</div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="gallery text-center width-100">
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/2-1.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>말을 하면 대답을 해주는 인공지능 캐릭터<br>AI MIKE</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/2-2.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>모자, 안경, 옷, 노래 등을 바꿀 수 있는 귀요미<br>AI MIKE</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/2-3.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>아이템 상점에서 다양한 의상과 배경음악을<br>추가할 수 있어요</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+        </section>
+        <!-- end 2 section -->
+
+		<!-- start 3 section -->
+		<section id="">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">TBA SPORTS</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">누구나 쉽고 재미있게 즐기는 스포츠 게임<br>축구, 야구, 점프게임, 장애물 달리기, 바이러스 피하기, 보석줍기 등을 가볍게 즐겨봐요!</p>
+				</div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="gallery text-center width-100">
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-1.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>TBA SPORTS 시작 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-2.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>축구, 야구, 점프, 달리기 등 6개의 미니게임</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-3.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>축구 - 슛 방향 선택 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-4.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>축구 게임 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-5.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>야구 게임 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-6.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>게임 승리 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-7.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>점프하면서 장애물 피하기 게임</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-8.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>장애물 달리기 게임</h4>
+								</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-9.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>비행접시를 타고 바이러스 피하기 게임</h4>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-lg-6 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/3-10.jpg" alt="">
+
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>떨어지는 보석 줍기 게임</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>                
+            </div>            
+        </section>
+        <!-- end 3 section -->
+
+		<!-- start 4 section -->
+		<section id="" class="parallax" data-overlay-dark="0" data-background="img/bg/bg-gray.jpg">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">OX GAME</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">많은 사람들과 동시에 참여하는 OX 퀴즈 게임<br>최후까지 살아남은 우승자에게 푸짐한 상품!</p>
+				</div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="gallery text-center width-100">
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/4-1.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>게임 참여 대기 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items design">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/4-2.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>게임 진행 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 margin-30px-bottom items develop">
+                            <div class="project-grid-style2">
+                                <div class="project-details">
+                                    <img src="img/game/4-3.jpg" alt="">
+                                </div>
+                                <div class="portfolio-title">
+                                    <h4>게임 우승 화면</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+        </section>
+        <!-- end 4 section -->
+
+        <!-- start youtube section -->
+        <section id="youtube">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">TBA Youtube</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">
+						우리는 춤추고 노래하는 TBA Family! <br>
+						동네가 철거되면서 주인들에게 버림받은 친구들이지만<br>
+						기쁠 때나 힘들 때나 함께 하자. 함께 노래하고 춤추자!<br>
+					</p>
+	            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/youtube/youtube-1.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4>Lazy Style Song - TBA Family</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>#kidssong #singalong #dancealong</p>
+							<div align="center"><a href="javascript:goYoutube(1)" class="butn"><span>LISTEN</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/youtube/youtube-2.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4>Friends Song - TBA Family</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>#friendship #friendsong #kidsmusic</p>
+							<div align="center"><a href="javascript:goYoutube(2)" class="butn"><span>LISTEN</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/youtube/youtube-3.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4>Blushing Cheeks Song - TBA Family</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>#love #songoftheweek #blushingcheeks</p> 
+							<div align="center"><a href="javascript:goYoutube(3)" class="butn"><span>LISTEN</span></a></div>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/youtube/youtube-4.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4>Yummy Song - TBA Family</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>#foodsong #singalong #dancealong</p>
+							<div align="center"><a href="javascript:goYoutube(4)" class="butn"><span>LISTEN</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>            
+        </section>
+        <!-- end youtube section -->
+
+
+		<!-- start product section -->
+		<section id="product" class="parallax" data-overlay-dark="0" data-background="img/bg/bg-gray.jpg">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">Product</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">
+					<br>
+				</div>
+            </div>
+
+	       <div class="container margin-70px-top sm-margin-50px-top">
+
+            <!-- start offer section -->
+            <div class="row margin-70px-bottom sm-margin-50px-bottom">
+                <div class="col-lg-8">
+                    <div class="row margin-30px-bottom xs-margin-20px-bottom">
+                        <div class="col-lg-12">
+                            <a href="javascript:void(0)">
+                                <img src="img/shop/product-banner-03.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <a href="javascript:void(0)" class="display-inline-block margin-30px-bottom xs-margin-20px-bottom width-100 text-center">
+                                <img src="img/shop/product-banner-01.jpg" alt="" />
+                            </a>
+                            <a href="javascript:void(0)" class="display-inline-block sm-margin-30px-bottom xs-margin-20px-bottom width-100 text-center">
+                                <img src="img/shop/product-banner-02.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 text-center xs-margin-20px-bottom">
+                            <div class="owl-carousel owl-theme">
+                                <div>
+                                    <a href="javascript:void(0)">
+                                        <img src="img/shop/product-banner-11.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0)">
+                                        <img src="img/shop/product-banner-12.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0)">
+                                        <img src="img/shop/product-banner-13.jpg" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 xs-margin-20px-bottom">
+                    <a href="javascript:void(0)" class="margin-30px-bottom sm-no-margin-bottom display-inline-block width-100">
+                        <img src="img/shop/product-banner-04.jpg" alt="" />
+                    </a>    
+                    </div>
+                                        <div class="col-lg-12 col-md-6">
+                    <a href="javascript:void(0)" class="display-inline-block width-100">
+                        <img src="img/shop/product-banner-05.jpg" alt="" />
+                    </a>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end offer section -->
+        </section>
+		<!-- end product section -->
+
+		<!-- start book section -->
+		<section id="book">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">TBA Book</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col">TBA 친구들과 함께 하는 즐거운 학습을!</p>
+				</div>
+			</div>
+			<div class="container">
+                <div class="row">
+                    <!-- start team member -->
+                    <div class="text-center col-lg-6 col-md-6 col-sm-12 sm-margin-20px-bottom">
+                        <div class="team-member-img">
+                            <img class="img-responsive" src="img/book/book-1.jpg" alt="">
+                        </div>
+						<div class="text-center margin-25px-top margin-15px-bottom padding-40px-bottom">
+							<div class="text-extra-dark-gray font-weight-600 text-uppercase font-size14 alt-font">흩어진 단서를 하나씩 분석해서 범인을 찾아낸다!<br>명탐정 과학 수사 놀이</div>
+						</div>
+					</div>
+                    <!-- start team member -->
+                    <div class="text-center col-lg-6 col-md-6 col-sm-12 sm-margin-20px-bottom">
+                        <div class="team-member-img">
+                            <img class="img-responsive" src="img/book/book-2.jpg" alt="">
+                        </div>
+						<div class="text-center margin-25px-top margin-15px-bottom padding-40px-bottom">
+							<div class="text-extra-dark-gray font-weight-600 text-uppercase font-size14 alt-font">TBA 친구들의 노래와 댄스를 따라만 해도<br>빠르고 재미있게 배울 수 있는 아라비아 숫자</div>
+						</div>
+					</div>
+                    <!-- start team member -->
+                    <div class="text-center col-lg-6 col-md-6 col-sm-12 sm-margin-20px-bottom">
+                        <div class="team-member-img">
+                            <img class="img-responsive" src="img/book/book-3.jpg" alt="">
+                        </div>
+						<div class="text-center margin-25px-top margin-15px-bottom padding-15px-bottom">
+							<div class="text-extra-dark-gray font-weight-600 text-uppercase font-size14 alt-font">TBA 친구들과 노래만 같이 하면 저절로 알아요!<br>TBA  Magic English</div>
+						</div>
+					</div>
+                    <!-- start team member -->
+                    <div class="text-center col-lg-6 col-md-6 col-sm-12 sm-margin-20px-bottom">
+                        <div class="team-member-img">
+                            <img class="img-responsive" src="img/book/book-4.jpg" alt="">
+                        </div>
+						<div class="text-center margin-25px-top margin-15px-bottom padding-15px-bottom">
+							<div class="text-extra-dark-gray font-weight-600 text-uppercase font-size14 alt-font">왁자지껄 말썽꾸러기 TBA 친구들의<br>ABC 알파벳 탐험대 이야기</div>
+						</div>
+					</div>
+				</div>                
+            </div>            
+        </section>
+        <!-- end book section -->
+
+		<!-- start instagram section -->
+		<section id="instagram" class="parallax" data-overlay-dark="0" data-background="img/bg/bg-gray.jpg">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">TBA Instagram</h3>
+					<!--
+					<p class="width-55 sm-width-75 xs-width-95 center-col">Business consulting excepteur sint occaecat cupidatat consulting non proident, sunt in culpa qui officia deserunt laborum Market.</p>
+					-->
+				</div>
+
+            <div class="row">
+               <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                   <div class="service-simple">
+                       <div class="overflow-hidden">
+                           <img alt="img" src="img/instagram/instagram-1.jpg" />
+                       </div>
+                       <div class="service-simple-inner">
+                           <h4 align="center">MIKE's Instagram</h4>
+                           <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                           <p>Blue baby schnauzer pup, Aroo!! 👣 I make music videos (👉link below). I post cute uplifting things to spread 💙. Follow my pal </p>
+                           <div align="center"><a href="javascript:goInstagram(1)" class="butn"><span>Visit MIKE's Instagram</span></a></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-6 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                   <div class="service-simple">
+                       <div class="overflow-hidden">
+                           <img alt="img" src="img/instagram/instagram-2.jpg" />
+                       </div>
+                       <div class="service-simple-inner">
+                           <h4 align="center">TBA Family Miko's Instagram</h4>
+                           <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                           <p>Kittï Kissï for Ü🌼#saidmiko🌈ABC🌈CUTE🌈FEELGOOD🌈VIBES Follow me 🧩🍑🌖</p>
+                           <div align="center"><a href="javascript:goInstagram(2)" class="butn"><span>Visit MIKO's Instagram</span></a></div>
+                       </div>
+					</div>
+               </div>
+            </div>            
+        </section>
+        <!-- end instagram section -->
+
+        <!-- start characters section -->
+        <section id="friends">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title-style2">Friends</h3>
+					<p class="width-55 sm-width-75 xs-width-95 center-col"></p>
+				</div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-1.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">MIKE 미개</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>정 많고 의리 있는 미개는 낙천적이지만 미련할 정도로 착한 심성 때문에 항상 당하고 양보하다 혼자 독박을 쓰기 일수다. 하지만 모든 동물들은 따뜻한 심성의 미개를 중심으로 모여들게 되고 서로를 위하며 위기를 헤쳐 나간다.</p>                                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-2.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">MIKO 미코</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>어릴 때 버려져 강아지들 속에 함께 자란 미코는 자신이 개라고 생각하며 산다. 뼈다귀를 좋아하고 동작이 빠르며 잔머리가 잘 돌아가 얄밉고 이기적이지만 미개를 만나면서 조금씩 상대에 대한 배려의 의미를 깨닫게 된다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-3.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">MIRI 미리</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>해부학 실험실에서 탈출한 후 트라우마에 시달리는 미리는 소음과 비슷한 음악을 좋아하는 낭만적인 개구리다.  나타났다 하면 모든 사건의 중심이 되어 일을 더 꼬이거나 엉망으로 만들지만 친구들에게 항상 재미를 주는 핵심 말썽꾸러기 캐릭터. </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-4.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">MIZI 미지</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>주인에게 버려져 쥐들하고 생활하며 왕따를 당했던  햄스터 미지는 미개를 만나  새로운 인생을 찾게 된다. 소심하고 잘 삐쳐도 미스테리 한 매력으로 미개에게 애정을 보내고 덩달아 좋아하는 미코와 3각 관계가 만들어진다. </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-5.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">JINDOG 진독</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>항상 과묵하고 화가 나면 급 포악해 지는 광기의 불독 (잡종 퍼그에 가깝다.) 주인한테 버려진 후 성격이 괴팍 해져 화를 참지 못하고 폭발한다.. 평소 외로움을  많이 타지만 자신의 영역을 넘어오면 단호하게 응징한다. </p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-6.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">BeBe 베베</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>길을 잃어 돌아다니던 중 TBA 패밀리에게 발견되어 함께 생활하게 된다. 귀여우면서도 고집이 세지만 순수하고 착하며 가끔 엉뚱하게 용기를 내어 앞장 서기도 한다. Mr. CPA에게 발견되어 부모에게 돌아가지만 티바패밀리가 위험한 존재로 오해를 받게 된다.</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-3 col-md-6 margin-30px-bottom sm-margin-20px-bottom">
+                    <div class="service-simple">
+                        <div class="overflow-hidden">
+                            <img alt="img" src="img/characters/character-7.jpg" />
+                        </div>
+                        <div class="service-simple-inner">
+                            <h4 align="center">Mr. CPA</h4>
+                            <div class="separator-line-horrizontal-full bg-medium-gray margin-10px-top margin-20px-bottom"></div>
+                            <p>철거 지역 경비원으로 버려진 동물을 잡으러 다닌다. 어리버리한 그의 공격과 대응은 동물가족들에게 서로 힘을 모아 위기를 넘기고 우정을 쌓아가는 계기가 된다. 동물들을 뒤좇다가도 점심시간이나 근무시간이 끝나면 칼 퇴근하는 성격.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>            
+	</section>
+	<!-- end characters section -->
+
+
+		<!-- start section -->
+		<section id="contact" class="parallax" data-overlay-dark="5" data-background="img/bg/bg-dark.jpg">
+            <div class="container">
+                <div class="section-heading white">
+                    <h3>CONTACT US</h3>
+                </div>
+
+				<div class="row">
+
+                    <!-- start contact form -->
+                    <div class="col-12">
+                            <form method="post" action="bat/rd-mailform.php" class="mailform off2">
+                                <input type="hidden" name="form-type" value="contact">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="name" placeholder="Your Name:" data-constraints="@LettersOnly @NotEmpty">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="email" placeholder="Email:" data-constraints="@Email @NotEmpty">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="phone" placeholder="Telephone:" data-constraints="@Phone">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea name="message" rows="5" placeholder="Message:" data-constraints="@NotEmpty"></textarea>
+                                    </div>
+                                    <div class="mfControls col-md-12">
+                                        <button type="submit" class="butn">Sumbit comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                    <!-- end contact form  -->
+
+                </div>
+            </div>
+        </section>
+        <!-- start we offer section -->
+
+
+
+	    <!--  start footer section -->
+	    <footer class="bg-black">
+		    <div class="footer-bottom">
+			    <div class="container">
+				    <div class="row">
+					    <div class="col-md-12 col-sm-12 text-center">
+						    <span class="font-size13 text-uppercase letter-spacing-1 text-light-gray">Project by AI-SUL Co., Ltd. ⓒ All rights reserved</span>
+	                    </div>
+		            </div>
+			    </div>
+	        </div>
+		    <div id="back-to-top" class="back-to-top reveal">
+			    <i class="fa fa-angle-up"></i>
+	        </div>
+	    </footer>
+		<!--  end footer section -->
+
+    </div>
+    <!-- end main-wrapper section -->
+
+
+
+	<!-- start scroll to top -->
+    <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top -->
+
+
+    <!-- all js include start -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- modernizr js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- navigation -->
+    <script src="js/nav-menu.js"></script>
+
+    <!-- serch -->
+    <script src="search/search.js"></script>
+
+    <!-- tab -->
+    <script src="js/easy.responsive.tabs.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- jquery.counterup.min -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- stellar js -->
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <!-- waypoints js -->
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- tab js -->
+    <script src="js/tabs.min.js"></script>
+
+    <!-- countdown js -->
+    <script src="js/countdown.js"></script>
+
+    <!-- jquery.magnific-popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- isotope.pkgd.min js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <!--  chart js -->
+    <script src="js/chart.min.js"></script>
+
+    <!-- revolution slider js files start -->
+    <script src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.actions.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.migration.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="js/rev_slider/extensions/revolution.extension.video.min.js"></script>
+    <!-- revolution slider js files end -->
+
+    <!-- map js -->
+    <script src="js/map.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- contact form scripts -->
+    <script src="js/mailform/jquery.form.min.js"></script>
+    <script src="js/mailform/jquery.rd-mailform.min.c.js"></script>
+
+    <!-- all js include end -->
+
+</body>
+</html>
